@@ -9,8 +9,11 @@
 </head>
 <body>
     <div id="container">
-        <div id="calculator" class="col-md-8">
+        <div id="calculator">
             <div id="result">
+                <div>
+                    <h5><span id="watch"></span></h5>
+                </div>
                 <div id="history">
                     <p id="historyValue"></p>
                 </div>
@@ -41,17 +44,13 @@
                 <button class="operator" id="=">=</button>
             </div>
         </div>
-        <div id="name" class="col-md-4">
-            <h3>Nazmus Sakib</h3>
-            <h4><span id="watch"></span></h4>
-        </div>
     </div>
     <script src="script.js"></script>
     <script>
         var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
         var time = today.getHours() + ":" + today.getMinutes();
-        var dateTime = date+' '+time;
+        var dateTime = 'Date: '+date+' '+"Time: "+time;
         document.getElementById('watch').innerText = dateTime;
     </script>
 </body>
